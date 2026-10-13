@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mastermind Bot - Advanced</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- PWA Manifest -->
+    <link rel="stylesheet" href="manifest.json">
+    <meta name="theme-color" content="#103f7f">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar for Chat History -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" onclick="startNewChat()">
+                    <i class="fa-solid fa-plus"></i> New Chat
+                </button>
+            </div>
+            <div class="history-list" id="historyList">
+                <!-- Chat history items will load here -->
+            </div>
+            <div class="sidebar-footer">
+                <button class="install-btn" id="installAppBtn" style="display: none;">
+                    <i class="fa-solid fa-download"></i> Install App
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <header class="chat-header">
+                <button class="menu-toggle" onclick="toggleSidebar()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <h2>Mastermind</h2>
+                <button class="onlick" onclick="setApiKey()" class="api-btn" title="API Key Set Karen">
+                    <i class="fa-solid fa-key"></i>
+                </button>
+            </header>
+
+            <div class="chat-messages" id="chatMessages">
+                <message class="ai-message">
+                    <avatar><i class="fa-solid fa-robot"></i></avatar>
+                    <content>
+                        Hello! Main aapka AI assistant hoon. Aap mujhse sawal, paheli, ya kisi bhi topic par baat kar sakte hain.
+                    </content>
+                </message>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <textarea id="userInput" placeholder="Yahan apna sawal likhein..." rows="1"></textarea>
+                    <button id="sendBtn" onclick="sendMessage()">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+            <footer class="footer-note">AI se ghalat maloomat bhi aa sakti hain, apni zaroorat ki thehqeeq kar lain.</footer>
+        </main>
+    </div>
+
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</htm>
